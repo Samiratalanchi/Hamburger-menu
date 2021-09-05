@@ -1,0 +1,29 @@
+body{
+    background-color: #250429;
+}
+.nav-icon{
+    margin: 100px;
+    width: 50px;
+}
+.nav-icon::before,
+.nav-icon::after,
+.nav-icon div {
+    height: 5px;
+    margin: 5px 0;
+    background-color: #fac839;
+    border-radius: 5px;
+    content: "";
+    display: block;
+    transition: all 1s;
+}
+
+/* Animation part */
+.nav-icon:hover div {
+    transform: scale(0);
+}
+.nav-icon:hover::before{
+    transform: rotate(135deg) translateY(-15px);
+}
+.nav-icon:hover::after {
+    transform: rotate(-135deg) translateY(15px);
+}
